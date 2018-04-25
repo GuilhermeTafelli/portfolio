@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-    <title>Teste</title>
+    <title>Guilherme Tafelli</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,11 +9,23 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="static/icons/font/flaticon.css">
+    <link rel="stylesheet" href="static/all-icons/font/flaticon.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Do+Hyeon|Fjalla+One|Francois+One" rel="stylesheet">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
+           });
+        });
+    </script>
+
     <style>
-        p{
+        p.about{
             font-family: 'Fjalla One', sans-serif
         }
         a.logo{
@@ -25,25 +37,38 @@
             font-size: 100px;
             color: dark;
         }
-        .experience{
+        .francois{
             font-family: 'Francois One', sans-serif;
         }
         .sub-experience{
-            font-size: 20px;
+            font-size: 25px;
             color:  #737373;
         }
-        .title-experience{
-            font-size: 100px;
-            color: dark;
-        }
         .body-experience{
-            font-size: 15px;
+            font-size: 20px;
             color: #737373;
             font-family: Arial
+        }
+        .sub-education{
+            font-size: 25px;
+            color: dark;
+        }
+        .body-education{
+            font-size: 20px;
+            color: #484848;
+            font-family: Arial
+        }
+        .awards{
+            font-family: 'Dosis', sans-serif;
+            font-size:20px;
         }
         i.a:hover{
             color:#FFFFFF
         }
+        i.hover-dark:hover{
+            color:#000000;
+        }
+
         div.cont{
             margin-top: 70px
         }
@@ -53,18 +78,41 @@
        div.blue{
            background:#09a3e6
        }
+       div.padding{
+           padding-bottom: 35px;
+       }
        .flaticon-facebook-logo:before {
-           font-size: 20px;
+           font-size: 35px;
        }
        .flaticon-github-logo:before {
-           font-size: 20px;
+           font-size: 35px;
        }
        .flaticon-instagram-symbol:before{
-           font-size: 20px;
+           font-size: 35px;
        }
-       .flaticon-twitter:before {
-           font-size: 20px;
+       .flaticon-twitter:before{
+           font-size: 35px;
        }
+       .flaticon-c-logo:before {
+           font-size: 30px;
+       }
+
+       .flaticon-python-language-logotype:before {
+           font-size: 30px;
+       }
+       .flaticon-css-3:before {
+           font-size: 30px;
+       }
+       .flaticon-html-5-logo:before{
+           font-size: 30px;
+       }
+       .flaticon-computer-processor:before{
+            font-size: 30px;
+        }
+        .flaticon-circuit-board:before{
+             font-size: 30px;
+         }
+
 
     </style>
     </head>
@@ -81,19 +129,19 @@
                             <div class="col">
                                 <ul class="navbar-nav">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#about-me"><i class="flaticon-avatar"></i> About-me</a>
+                                        <a class="nav-link scroll" href="#about-me"><i class="flaticon-avatar"></i> About-me</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#experince"><i class="flaticon-test-tube-experiment"></i> Experience</a>
+                                        <a class="nav-link scroll" href="#experince"><i class="flaticon-test-tube-experiment"></i> Experience</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#education"><i class="flaticon-mortarboard"></i> Education</a>
+                                        <a class="nav-link scroll" href="#education"><i class="flaticon-mortarboard"></i> Education</a>
                                     </li>
                                     <li>
-                                        <a class="nav-link" href="#"><i class="flaticon-coding"></i> Skills</a>
+                                        <a class="nav-link scroll" href="#skills"><i class="flaticon-coding"></i> Skills</a>
                                     </li>
                                     <li>
-                                        <a class="nav-link" href="#"><i class="flaticon-trophy"></i> Awards</a>
+                                        <a class="nav-link scroll" href="#awards"><i class="flaticon-trophy"></i> Awards</a>
                                     </li>
                                 </ul>
                             </div>
@@ -101,8 +149,8 @@
                     </div>
             </header>
         </div>
-        <!--about-me-->
-        <div class="container-fluid blue" id="about-me">
+        <!--About-me-->
+        <div class="container-fluid blue padding" id="about-me">
             <div class="container-fluid cont2">
                 <div class="row justify-content-center">
                     <h1 class="title">About-me</h1>
@@ -112,7 +160,7 @@
                 </div>
                 <br>
                 <div class="row justify-content-center">
-                    <p style="color:white">Meu nome é Guilherme Tafelli, tenho 17 anos, moro em Uberlândia, Minas Gerais. Estou cursando o 2 ano do ensino media</p>
+                    <p  align="justify"class="about "style="color:white">Meu nome é Guilherme Tafelli, tenho 17 anos, moro em Uberlândia, Minas Gerais, e estou cursando o 2º ano do Ensino médio. Sou desenvolvedor desde os 13 anos, e sou apaixonado pelo o que eu faço.</p>
                 </div>
                 <br><br>
                 <div class="row justify-content-end" style="margin-right:auto;margin-bottom:20px">
@@ -127,250 +175,415 @@
                 </div>
             </div>
         </div>
-        <!--experience--->
-        <div class="container-fluid bg-white cont  border-bottom" id="experince">
-            <div class="row justify-content-center">
-                <i class="flaticon1-test-tube-experiment" style="font-size:50px"></i>
-                <h1 class="title title-experience"><img src="static/experiment.png" width="80px">EXPERIENCE</h1>
+        <!--Experience--->
+        <div class="container-fluid bg-white cont border-bottom padding" id="experince">
+            <div class="row justify-content-center align-items-center">
+                <h1 class="title title-experience">EXPERIENCE</h1>
             </div>
             <div class="container-fluid">
-                <h3 class="experience">INICIAÇÃO CIENTÍFICA:</h3>
+                <h3 class="francois">INICIAÇÃO CIENTÍFICA:</h3>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">SISTEMAS QUE REUTILIZAM A ÁGUA GASTA EM
+                    <div class="col-md-6 col-xs-6">
+                        <h3 align="justify" class="francois sub-experience">SISTEMAS QUE REUTILIZAM A ÁGUA GASTA EM
                         UMA RESIDÊNCIA:</h3>
                     </div>
-                    <div class="col-md-2 offset-md-6 col-xs offset-xs-7">
-                        <h4 class="experience sub-experience">Junho/2013 – Outubro/2013</h4>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-experience">Junho/2013 – Outubro/2013</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
-                        <p class="experince body-experience">Projeto de Pesquisa, intitulado: “SISTEMAS QUE REUTILIZAM A ÁGUA GASTA EM
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">Projeto de Pesquisa, intitulado: “SISTEMAS QUE REUTILIZAM A ÁGUA GASTA EM
                         UMA RESIDÊNCIA, orientado pela Professora Maísa Gonçalves da Silva, com carga horária
-                        de 72 horas</p>
+                        de 72 horas.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">REAPROVEITAMENTO DE ÁGUA EM
+                    <div class="col-md-6 col-xs-6">
+                        <h3 class="francois sub-experience">REAPROVEITAMENTO DE ÁGUA EM
                         CONSTRUÇÕES:</h3>
                     </div>
-                    <div class="col-md-2 offset-md-6 col-xs offset-xs-7">
-                        <h4 class="experience sub-experience">Março/2014 – Novembro/2014</h4>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-experience">Março/2014 – Novembro/2014</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
-                        <p class="experince body-experience">Projeto de Pesquisa, intitulado: “REAPROVEITAMENTO DE ÁGUA EM
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">Projeto de Pesquisa, intitulado: “REAPROVEITAMENTO DE ÁGUA EM
                         CONSTRUÇÕES”, orientado pelos Professores Vitor Martins do Carmo e Maísa Gonçalves
-                        da Silva, com carga horária de 144 horas</p>
+                        da Silva, com carga horária de 144 horas.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">SISTEMAS QUE REUTILIZAM A ÁGUA GASTA EM
+                    <div class="col-md-6 col-xs-6">
+                        <h3 class="francois sub-experience">SISTEMAS QUE REUTILIZAM A ÁGUA GASTA EM
                         UMA RESIDÊNCIA:</h3>
                     </div>
-                    <div class="col-md-2 offset-md-6 col-xs offset-xs-7">
-                        <h4 class="experience sub-experience"> Janeiro/2015 – Dezembro/2016</h4>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-experience"> Janeiro/2015 – Dezembro/2016</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
-                        <p class="experince body-experience">Projeto de Pesquisa, intitulado: “SISTEMAS QUE REUTILIZAM A ÁGUA GASTA EM
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">Projeto de Pesquisa, intitulado: “SISTEMAS QUE REUTILIZAM A ÁGUA GASTA EM
                         UMA RESIDÊNCIA”, orientado pelos Professores Vitor Martins do Carmo e Maísa
                         Gonçalves da Silva, com carga horária de 144 horas.</p>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">PIC</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">PIC:</h3>
                     </div>
                     <div class="col-md-2 offset-md-6 col-xs offset-xs-7">
-                        <h4 class="experience sub-experience">Junho/2013 – Outubro/2013</h4>
+                        <h4 class="francois sub-experience">Junho/2013 – Outubro/2013</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
-                        <p class="experince body-experience">Programa de Iniciação Cientifica da Olimpíada Brasileira de Matemática
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">Programa de Iniciação Cientifica da Olimpíada Brasileira de Matemática
                         das Escolas Públicas com Bolsa de Iniciação Cientifica Jr.
                         do Conselho Nacional de Desenvolvimento Cientifico e Tecnológico – CNPq.</p>
                     </div>
                 </div>
-
-                <h3 class="experience">PARTICIPAÇÃO EM OFICINAS, MARATONAS E OLIMPIADAS:</h3>
+                <h3 class="francois">APRESENTAÇOES EM FEIRAS E SEMINARIOS INTERNACIONAIS:</h3>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">Oficina “Visita à Exposição sobre Ano Internacional da luz”:</h3>
+                    <div class="col-md-6 col-xs-6">
+                        <h3 align="justify" class="francois sub-experience">Apresentação do trabalho “Investigação do Teor de álcool na gasolina através de experiências
+                        químicas”:</h3>
+                    </div>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-experience">Outubro/2013</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">Apresentação do trabalho “Investigação do Teor de álcool na gasolina através de experiências
+                        químicas” na 1ª Feira Brasileira de Colégios de Aplicações e Escolas Técnicas (FEBRAT) –
+                        Belo Horizonte.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <h3 align="justify" class="francois sub-experience">Apresentação do trabalho “Reaproveitamento de água em construções”:</h3>
+                    </div>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-experience">Outubro/2014</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">Apresentação do trabalho “Reaproveitamento de água em construções” na 2ª Feira Brasileira
+                        de Colégios de Aplicações e Escolas Técnicas (FEBRAT) – Belo Horizonte.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <h3 align="justify" class="francois sub-experience">Apresentação na forma de pôster do trabalho: “Reutilização consciente da água em
+                        atividades domésticas água”:</h3>
+                    </div>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-experience">Novembro/2014</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">Apresentação na forma de pôster do trabalho: “Reutilização consciente da água em
+                        atividades domésticas água” durante o XIX Ciência Viva - Uberlândia.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <h3 align="justify" class="francois sub-experience">Apresentação do trabalho “Reaproveitamento de água em construções”- Equador:</h3>
+                    </div>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-experience">Abril/2015</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify"class="experince body-experience">Exposicion Latinoamericana de Empreendimientos Productivos, Ciencia y Tecnologia – 2015
+                        – (Ambato/Equador).</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <h3 align="justify" class="francois sub-experience">Apresentação na Modalidade Comunicação Oral do trabalho intitulado: “Reutilizando água:
+                        cuidando de um bem precioso”:</h3>
+                    </div>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-experience">Setembro/2015</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">Apresentação na Modalidade Comunicação Oral do trabalho intitulado: “Reutilizando água:
+                        cuidando de um bem precioso” durante o SICEA DISCENTE - Juiz de Fora.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <h3 align="justify" class="francois sub-experience">Apresentação na forma de pôster do trabalho intitulado: “Sistemas que reutilizam a água gasta
+                        em uma residência”:</h3>
+                    </div>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-experience">Novembro/2015</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div align="justify" class="col-md-8 col-xs-10">
+                        <p class="experince body-experience">Apresentação na forma de pôster do trabalho intitulado: “Sistemas que reutilizam a água gasta
+                        em uma residência” durante o XX Ciência Viva - Uberlândia.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <h3 align="justify" class="francois sub-experience">Apresentação do projeto intitulado: “Sistemas que reutilizam a água gasta em uma residência”:</h3>
+                    </div>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-experience">Maio/2016</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">Apresentação do projeto intitulado: “Sistemas que reutilizam a água gasta em uma residência”
+                        durante a 14ª Feira Brasileira de Ciências e Engenharia (FEBRACE 2016) – USP/ São Paulo.</p>
+                    </div>
+                </div>
+
+                <h3 class="francois">PARTICIPAÇÃO EM OFICINAS, MARATONAS E OLÍMPIADAS:</h3>
+                <div class="row">
+                    <div class="col-md-6 col-xs-10">
+                        <h3 class="francois sub-experience">Oficina “Visita à Exposição sobre Ano Internacional da luz”:</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-xs-10">
                         <p class="experince body-experience">Ministrado pelo Prof. Dr. Elói
 Cesar durante o SICEA DISCENTE.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">Oficina de Gravação e Técnicas de Áudio:</h3>
+                    <div class="col-md-6 col-xs-10">
+                        <h3 class="francois sub-experience">Oficina de Gravação e Técnicas de Áudio:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
-                        <p class="experince body-experience">ministrada por Antena Buriti e CEARCT (Outubro – Novembro/2014),
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">ministrada por Antena Buriti e CEARCT (Outubro – Novembro/2014),
                          com duração de 14 horas.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">OBMEP 2013:</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">OBMEP 2013:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
-                        <p class="experince body-experience">9º Olimpíada Brasileira de Matemática das Escolas Públicas</p>
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-experience">9º Olimpíada Brasileira de Matemática das Escolas Públicas</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">OBMEP 2014:</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">OBMEP 2014:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-10">
                         <p class="experince body-experience">10º Olimpíada Brasileira de Matemática das Escolas Públicas</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">OBMEP 2015:</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">OBMEP 2015:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-James Buchanan High Schoo10">
                         <p class="experince body-experience">11º Olimpíada Brasileira de Matemática das Escolas Públicas</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">OBMEP 2016:</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">OBMEP 2016:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-10">
                         <p class="experince body-experience">12º Olimpíada Brasileira de Matemática das Escolas Públicas</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">OBI 2016:</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">OBI 2016:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-10">
                         <p class="experince body-experience">XVIII Olimpíada Brasileira de Informática</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">OBI 2017:</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">OBI 2017:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-10">
                         <p class="experince body-experience">XIV Olimpíada Brasileira de Informática</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">Maratona Algar:</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">Maratona Algar:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-10">
                         <p class="experince body-experience">Maratona de Programação – Algar (Abril de 2016).</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">2º JoGAr:</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">2º JoGAr:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-10">
                         <p class="experince body-experience">Maratona de Programação para Ensino Médio(2015)</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">3º JoGAr:</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">3º JoGAr:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-10">
                         <p class="experince body-experience">Maratona de Programação para Ensino Médio(2016)</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 bg">
-                        <h3 class="experience sub-experience">4º JoGAr:</h3>
+                    <div class="col-md-4 col-xs-10">
+                        <h3 class="francois sub-experience">4º JoGAr:</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-md-8 col-xs-10">
                         <p class="experince body-experience">Maratona de Programação para Ensino Médio(2017)</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid" id="education" style="background:#bfbfbf">
+        <!--Education-->
+        <div class="container-fluid blue padding" id="education">
             <div class="row justify-content-center">
                 <h1 class="title" style="color:white">Education</h1>
             </div>
             <div class="container-fluid">
-
+                <h3 class="francois">FORMAÇÃO ACADÊMICA:</h3>
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <h3 align="justify" class="francois sub-education">ENSINO FUNDAMENTAL:</h3>
+                    </div>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-education ">Janeiro\2005 – Dezembro\2016</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-education">Escola de Educação Básica da Universidade Federal de Uberlândia (ESEBA).</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <h3 align="justify" class="francois sub-education">ENSINO MÉDIO:</h3>
+                    </div>
+                    <div class="col-md-2 offset-md-4 col-xs offset-xs-5">
+                        <h4 class="francois sub-education ">Janeiro\2017 – Dezembro\2018</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-xs-10">
+                        <p align="justify" class="experince body-education">Colégio Nacional (Uberlândia).</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="margin:20px;">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="http://www.eseba.ufu.br/"><img src="static/eseba.png" class="img-fluid" width="150px"></a></li>
+                        <li class="list-inline-item"><a href="https://www.nacionalnet.com.br/"><img src="static/nacional.png" class="img-fluid" width="300px"></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-APRESENTAÇOES EM FEIRAS E SEMINARIOS INTERNACIONAIS:
-Apresentação do trabalho “Investigação do Teor de álcool na gasolina através de experiências
-químicas” na 1ª Feira Brasileira de Colégios de Aplicações e Escolas Técnicas (FEBRAT) –
-Belo Horizonte (Outubro/2013).
-Apresentação do trabalho “Reaproveitamento de água em construções” na 2ª Feira Brasileira
-de Colégios de Aplicações e Escolas Técnicas (FEBRAT) – Belo Horizonte (Outubro/2014).
+        <!--Skills-->
+        <div class="container-fluid padding" id="skills">
+            <div class="row justify-content-center">
+                <h1 class="title">Skills</h1>
+            </div>
+            <div class="container-fluid">
+                <h3 class="francois">LINGUAGENS DE PROGRAMAÇÂO:</h3>
+                <div class=row justify-content-start>
+                    <ul class="list-inline">
+                        <li class="list-inline-item" style="margin-right:0px;margin-left:0px"><a class="nav-link" href="https://pt.wikipedia.org/wiki/C%2B%2B" style="color:#737373;"><i class="flaticon-c-logo hover-dark"></i></a></li>
+                        <li class="list-inline-item" style="margin-right:0px"><a class="nav-link" href="https://www.python.org/" style="color:#737373;"><i class="flaticon-python-language-logotype hover-dark"></i></a></li>
+                        <li class="list-inline-item" style="margin-right:0px"><a class="nav-link" href="https://pt.wikipedia.org/wiki/HTML" style="color:#737373;"><i class="flaticon-html-5-logo hover-dark"></i></a></li>
+                        <li class="list-inline-item" style="margin-right:0px"><a class="nav-link" href="https://pt.wikipedia.org/wiki/Cascading_Style_Sheets" style="color:#737373;"><i class="flaticon-css-3 hover-dark"></i></a></li>
+                    </ul>
+                </div>
+                <h3 class="francois">INGLÊS:</h3>
+                <div class=row"">
+                    <p align="justify" class="experince body-education">Intermediário (Dom Afonso).</p>
+                </div>
+                <h3 class="francois">ELETRÔNICA<i class="flaticon-computer-processor hover-dark"></i></h3>
+                <div class=row"">
+                    <p align="justify" class="experince body-education">Intermediário.</p>
+                </div>
+                <h3 class="francois">ARDUINO<i class="flaticon-circuit-board hover-dark"></i></h3>
+                <div class=row"">
+                    <p align="justify" class="experince body-education">Avançado</p>
+                </div>
+            </div>
+        </div>
+        <!--Awards-->
+        <div class="container-fluid blue padding" id="awards">
+            <div class="row justify-content-center">
+                <h1 class="title" style="color:white">Awards</h1>
+            </div>
+            <div class="container ">
+                <div class="row justify-content-center">
+                    <div class="col-12">
 
-Apresentação na forma de pôster do trabalho intitulado: “Reutilização consciente da água em
-atividades domésticas água” durante o XIX Ciência Viva - Uberlândia (Novembro/2014).
-Apresentação do trabalho “Reaproveitamento de água em construções” na 4ª. Feria
-Exposicion Latinoamericana de Empreendimientos Productivos, Ciencia y Tecnologia – 2015
-– (Ambato/Equador).
-Apresentação na Modalidade Comunicação Oral do trabalho intitulado: “Reutilizando água:
-cuidando de um bem precioso” durante o SICEA DISCENTE - Juiz de Fora
-(Setembro/2015).
-Apresentação na forma de pôster do trabalho intitulado: “Sistemas que reutilizam a água gasta
-em uma residência” durante o XX Ciência Viva - Uberlândia (Novembro/2015).
-Apresentação do projeto intitulado: “Sistemas que reutilizam a água gasta em uma residência”
-durante a 14ª Feira Brasileira de Ciências e Engenharia (FEBRACE 2016) – USP/ São Paulo
-(Março/2016).
-PARTICIPAÇÃO EM OFICINAS, MARATONAS E OLIMPIADAS:
-Oficina “Visita à Exposição sobre Ano Internacional da luz” ministrado pelo Prof. Dr. Elói
-Cesar durante o SICEA DISCENTE.
-Oficina de Gravação e Técnicas de Áudio ministrada por Antena Buriti e CEARCT (Outubro
-– Novembro/2014), com duração de 14 horas.
-9º Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP 2013).
-10º Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP 2014).
-11º Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP 2015).
-12º Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP 2016).
-XVIII Olimpíada Brasileira de Informática (OBI 2016).
-2º JoGAr (Maratona de Programação).
-Minimaratona de Programação – Algar (Abril de 2016).
-3º JoGAr (Maratona de Programação).
 
-        <i class="flaticon-trophy"></i>
+
+                        <p class="awards" lign="justify"><img src="static/bronze.png" width="20px">Medalha de bronze na 9º Olimpíada Brasileira de Matemática das Escolas Públicas –
+                        OBMEP-2013.</p>
+                        <p class="awards" align="justify"><img src="static/bronze.png" width="20px"> Medalha de bronze na 10º Olimpíada Brasileira de Matemática das Escolas Públicas –
+                        OBMEP-2014.</p>
+                        <p class="awards" align="justify"><img src="static/gold.png" width="20px"> Primeiro Lugar na II Feira Brasileira de Colégios de Aplicação e Escolas Técnicas
+                        (FEBRAT), área de Ciências Biológicas e Ciências da Saúde, Categoria A, Ensino Fundamental - 2014.</h3>
+                        <p class="awards"><img src="static/gold.png" width="20px">Menção Honrosa em Criatividade e Inovação na II Feira Brasileira de Colégios de Aplicação
+                        e Escolas Técnicas – FEBRAT – 2014.</p>
+                        <p class="awards"><img src="static/gold.png" width="20px"> Primeiro Lugar no XIX Ciência Viva, na categoria B, Ensino Fundamental 2 – 2014.
+                        Medalha de prata na 10º Olimpíada Brasileira de Matemática das Escolas Públicas – OBMEP-
+                        2015.</p>
+                        <p class="awards"><img src="static/bronze.png" width="20px"> Medalha de Bronze na 2º JoGAr (Maratona de programação) – 2015.</p>
+                        <p class="awards"><img src="static/gold.png" width="20px"> Primeiro Lugar no XX Ciência Viva, na categoria B, Ensino Fundamental 2, Ciências
+                        Agrárias, Biológicas e Saúde – 2015.</p>
+                        <p class="awards"><img src="static/bronze.png" width="20px"> Medalha de Bronze na 3º JoGAr (Maratona de programação) – 2016.</p>
+                        <p class="awards"><img src="static/silver.png" width="20px"> Medalha de Prata na 11º Olimpíada Brasileira de Matemática das Escolas Públicas –
+                        OBMEP-2015.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-        </body>
-    </html>
+</body>
+</html>
